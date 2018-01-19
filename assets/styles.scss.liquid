@@ -5530,6 +5530,8 @@ div.cloudzoom-ajax-loader {
 /***************************************************/
 /* #Styles By Steven Aldous for Nuflo ============ */
 /***************************************************/
+
+
 /***************************************************/
 /* #Header Styles ================================ */
 /***************************************************/
@@ -5541,15 +5543,69 @@ div.cloudzoom-ajax-loader {
   }
 }
 
-  .nav ul li:hover a.dropdown-link, 
-  .feature_image .header .nav ul li:hover a.dropdown-link {
-    border: transparent 1px solid;
+.nav ul li:hover a.dropdown-link, 
+.feature_image .header .nav ul li:hover a.dropdown-link {
+  border: transparent 1px solid;
+}
+.nav .dropdown {
+  min-width: 120px;
+}
+.header div.container {
+  padding: 40px 0 20px;
+}
+#header {
+    border-bottom: none;
+    &.mobile-header {
+    height: 60px;
+    a.icon-menu, a.icon-cart {
+      top: 10px;
+    }
   }
-  .nav .dropdown {
-    min-width: 120px;
-  }
+}
 
 
+#content_wrapper div.content {
+  @media only screen and (max-width: 767px) {
+    padding: 60px 0 0 0 !important;
+  }
+  @media only screen and (min-width: 768px)  and (max-width: 959px) {
+    padding: 145px 0 0 0 !important;
+  }
+}
+
+
+/***************************************************/
+/* #Home Template Styles ========================= */
+/***************************************************/
+.shopify-section.headline-section.featured-content-section {
+  padding: 50px 0;
+  @media only screen and (max-width: 767px) {
+    padding: 25px;
+  }
+  .container {
+    padding: 50px 0;
+    @media only screen and (max-width: 767px) {
+      padding: 25px;
+    }
+  }
+  
+}
+
+
+
+/***************************************************/
+/* #Page Template Styles ========================= */
+/***************************************************/
+.shopify-section {
+  .banner-template-section {
+    .container {
+      padding: 100px 0;
+      @media only screen and (max-width: 767px){
+        padding: 50px 0;
+      }
+    }
+  }
+}
 /***************************************************/
 /* #Product Detail Styles ======================== */
 /***************************************************/
@@ -5563,6 +5619,8 @@ div.cloudzoom-ajax-loader {
     }
   }
 }
+
+
 
 
 
