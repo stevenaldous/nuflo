@@ -91,6 +91,14 @@ sections/contact-template.liquid:
   development: 2017-12-18T14:05:12-08:00   f830f58693dfa4261a5819577ba8cd9e
 sections/content-page.liquid:
   development: 2017-12-18T14:05:12-08:00   e954def65a6afe36e8549b4709ae36c6
+sections/custom-1.liquid:
+  development: 2018-02-01T16:15:58-08:00   94dcf0117153741ff12d019366acd58f
+sections/custom-2.liquid:
+  development: 2018-02-01T16:12:29-08:00   b5d73ff6b33a8b5fe085545dba65eaba
+sections/custom-3.liquid:
+  development: 2018-02-01T16:15:06-08:00   b1570aed64cb5096eabcf86b844afa16
+sections/custom-4.liquid:
+  development: 2018-02-01T16:15:20-08:00   6dbc23f1a0474ba455bd1247503f3d25
 sections/featured-collection.liquid:
   development: 2017-12-18T14:05:12-08:00   26d117edef48d4ae27242a73f92b20db
 sections/featured-products.liquid:
@@ -225,6 +233,12 @@ templates/page.banner.liquid:
   development: 2017-12-18T14:05:20-08:00   b06daadf4ee3030ccbdd06accc465761
 templates/page.contact.liquid:
   development: 2017-12-18T14:05:20-08:00   0d0d60a8f9f8ea9bfd213d74b668f297
+templates/page.custom-1.liquid:
+  development: 2018-02-01T16:16:07-08:00   3190be0be15524424399d12cd3586db1
+templates/page.custom-2.liquid:
+  development: 2018-02-01T16:13:42-08:00   5058f2cf3c9af1a2ffebdcf941865aa2
+templates/page.custom-4.liquid:
+  development: 2018-02-01T16:14:09-08:00   2a27b89e501f6018c48de0977b0eaa89
 templates/page.details.liquid:
   development: 2017-12-18T14:05:20-08:00   b76442952ffb97be2cd607b4aa41c1d9
 templates/page.gallery.liquid:
