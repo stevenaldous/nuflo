@@ -196,7 +196,7 @@
       {% if collections[col].all_products_count != 1 or collections[col].products.first.id != product.id %}
         <br class="clear" />
         <br class="clear" />
-        <h4 class="title center">{{ 'products.product.related_items' | t }}</h4>
+        <h4 class="title center">HELLO {{ 'products.product.related_items' | t }}</h4>
 
         {% assign skip_product = product %}
         {% assign products = collections[col].products %}

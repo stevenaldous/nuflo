@@ -46,7 +46,7 @@ assets/slideshow_1.jpg:
 assets/soldout.png:
   development: 2017-12-18T14:05:17-08:00   6a7697db19e17aae7568e216c2b365af
 assets/styles.scss.liquid:
-  development: 2018-02-08T12:52:19-08:00   710cbbacc4657d7d592b3d8b0b17d137
+  development: 2018-02-15T18:29:59-08:00   9ed0281a45e24a12c2796152701d2dbf
 assets/styles_BU.scss.liquid:
   development: 2017-12-29T16:47:18-08:00   c75c17b13a18ddec8c16b297fda101f6
 config/settings_data.json:
@@ -136,9 +136,9 @@ sections/page-details-template.liquid:
 sections/page-sidebar-template.liquid:
   development: 2017-12-18T14:05:13-08:00   939bb494b7e75e282f0d219aa9045de6
 sections/product-description-bottom-template.liquid:
-  development: 2017-12-18T14:05:13-08:00   68a14c8cadf4174839d31ea08d385002
+  development: 2018-02-15T18:23:19-08:00   f7d05593d9e3c9ddc18148b42d923030
 sections/product-details-template.liquid:
-  development: 2017-12-18T14:05:13-08:00   23e5cddfbfe5abf30d539f93cd146b22
+  development: 2018-02-15T18:26:16-08:00   40f010ee5712b41309906a9820c930bc
 sections/product-template.liquid:
   development: 2017-12-18T14:05:13-08:00   0dca913c8dfafda8a1521768983d07b4
 sections/search-template.liquid:

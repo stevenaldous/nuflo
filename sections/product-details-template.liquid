@@ -532,7 +532,7 @@
 
 {% if section.settings.related_products_position == 'below' %}
   {% if section.settings.display_related_products %}
-    <div class="container">
+    <div class="container related-items">
       {% capture limit %}{{ section.settings.products_per_row | plus: 1 }}{% endcapture %}
 
       {% if collection and collection.all_products_count > 1 %}
