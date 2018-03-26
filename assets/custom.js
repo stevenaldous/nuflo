@@ -1,7 +1,7 @@
 function run() {
 
 	function objFit(id) {
-		if (!Modernizr.objectfit) {
+		if (Modernizr.objectfit) {
   			//supported
 		} else {
 			// not supported

@@ -31,7 +31,7 @@
       {% assign values = values | split: ',' %}
 
       <input id="swatch-{{ option_index }}-{{ value | handle }}-{{ product.id }}{{ section.id }}{{ block.id }}" type="radio" name="option-{{ option_index }}" value="{{ value | escape }}"{% if forloop.first %} checked{% endif %} />
-      <div data-value="{{ value | escape }}" class="swatch-element {% if is_color %}color {% endif %}{{ value | handle }}-swatch {% if variant.available %}available{% else %}soldout{% endif %}">
+      <div data-value="{{ value | escape }}" class="swatch-element {% if is_color %}color {% else %} size {% endif %}{{ value | handle }}-swatch {% if variant.available %}available{% else %}soldout{% endif %}">
         {% if is_color %}
           <div class="tooltip">{{ value }}</div>
         {% endif %}

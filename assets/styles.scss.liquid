@@ -5562,10 +5562,10 @@ div.cloudzoom-ajax-loader {
     }
   }
 }
-.homepage_slider .slides img {
-  max-height: 600px;
-  width: auto;
-}
+// .homepage_slider .slides img {
+//   max-height: 600px;
+//   width: auto;
+// }
 
 #content_wrapper div.content {
   @media only screen and (max-width: 767px) {
@@ -5764,6 +5764,29 @@ body.index #content_wrapper div.content {
   }
 }
 
+#shopify-section-1482527966363 {
+  .flex-caption {
+    top: 65%;
+    -webkit-transform: translateY(-35%);
+    -ms-transform: translateY(-35%);
+    transform: translateY(-35%);
+    .container {
+      margin: 0 0 0 auto;
+      padding: 0;
+      .eight.columns {
+        position: absolute;
+        background: #080404;
+        max-width: 300px;
+        right: 0;
+        padding: 25px;
+        .subtitle p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
 
 /***************************************************/
 /* #Page Template Styles ========================= */
@@ -5799,7 +5822,6 @@ body.index #content_wrapper div.content {
   margin-bottom: 0;
 }
 .thumbnail .price
-// , .thumbnail .sold_out, .sold_out
  {
   display: inline;
   &:before {
@@ -5819,6 +5841,11 @@ h1.product_name {
     max-width: 400px;
   }
 }
+.swatch_options input:checked+.swatch-element.size {
+  border-color: #666;
+  background: #666;
+  color: #fff;
+}
 /***************************************************/
 /* #Privacy Policy Styles ======================== */
 /***************************************************/
@@ -5830,10 +5857,12 @@ h1.product_name {
 /***************************************************/
 /* #About page ================================ */
 /***************************************************/
-section.About .homepage_slider .slides img {
-  width: 100%;
-  height: auto;
-  max-height: 100%;
+section.About {
+  .homepage_slider .slides img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
 }
 /***************************************************/
 /* FAQs page ================================ */
