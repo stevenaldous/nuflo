@@ -9,8 +9,13 @@ function run() {
   			var l = el.getElementsByTagName('li').length;
   			for (i = 0; i < l; i++ ) {
   				var ch = el.getElementsByTagName('li')[i];
-  				var img = ch.getElementsByTagName('img')[0]
-  				var src = img.currentSrc;
+  				var img = ch.getElementsByTagName('img')[0];
+  				if(img.currentSrc == undefined ) {
+  					var src = img.src;
+  					src = src.replace(/_300x/gi , '_2048x');
+  				} else {
+  					var src = img.currentSrc;
+  				}
   				ch.style.backgroundImage = 'url("'+ src +'")';
   				ch.classList.add('objectfit')
   			}
