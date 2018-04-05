@@ -1,0 +1,45 @@
+<div class="featured_links_style--{{ block.settings.featured_links_style }} container">
+  <div class="sixteen columns featured_links">
+    <div class="section clearfix">
+        <div class="featured_links_block one-third column alpha">
+          <a href="{{ block.settings.link_1 }}">
+            <div class="image_container {% if block.settings.image_1 == nil %}onboarding{% endif %}">
+              {% if block.settings.image_1 != nil %}
+                <img src="{{ block.settings.image_1 | img_url: '1024x' }}" alt="{{ block.settings.image_1.alt }}" />
+              {% endif %}
+              {% if block.settings.title_1 != blank %}
+                <span>{{ block.settings.title_1 | escape }}</span>
+              {% endif %}
+            </div>
+          </a>
+        </div>
+
+        <div class="featured_links_block one-third column">
+          <a href="{{ block.settings.link_2 }}">
+            <div class="image_container {% if block.settings.image_2 == nil %}onboarding{% endif %}">
+              {% if block.settings.image_2 != nil %}
+                <img src="{{ block.settings.image_2 | img_url: '1024x' }}" alt="{{ block.settings.image_2.alt }}" />
+              {% endif %}
+              {% if block.settings.title_2 != blank %}
+                <span>{{ block.settings.title_2 | escape }}</span>
+              {% endif %}
+            </div>
+          </a>
+        </div>
+
+        <div class="featured_links_block one-third column omega">
+          <a href="{{ block.settings.link_3 }}">
+            <div class="image_container {% if block.settings.image_3 == nil %}onboarding{% endif %}">
+              {% if block.settings.image_3 != nil %}
+                <img src="{{ block.settings.image_3 | img_url: '1024x' }}" alt="{{ block.settings.image_3.alt }}" />
+              {% endif %}
+              {% if block.settings.title_3 != blank %}
+                <span>{{ block.settings.title_3 | escape }}</span>
+              {% endif %}
+            </div>
+          </a>
+        </div>
+
+    </div>
+  </div>
+</div>

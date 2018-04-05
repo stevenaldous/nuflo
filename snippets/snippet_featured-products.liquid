@@ -1,0 +1,65 @@
+<div class="container feat_products">
+  <div class="section clearfix">
+      <div class="sixteen columns">
+      {% if block.settings.fps_title != blank %}
+        <h2 class="title">
+          {{ block.settings.fps_title }}
+        </h2>
+      {% endif %}
+
+      {%- assign product = all_products[block.settings.fps_1_featured_product] -%}
+      {% if product  %}
+        <div class="section clearfix">
+          <h3 class="subtitle">{{ block.settings.fps_1_subtitle }}</h3>
+        </div>
+        {%- assign product = all_products[block.settings.fps_1_featured_product] -%}
+        <div class="prod-row">
+        {% for variant in product.variants limit:12 %}
+          {% assign temp = " option1_" | append: variant.option1 | handleize %}
+          {% if forloop.first %}
+            {% assign unique_option1 = temp %}
+              <a href="{{ product.url}}" id ="prod-{{ variant.id }}" class="feat_prod one-third columns">
+                <img src="{{variant.featured_image | img_url: '580x' }}" />
+                <h3>{{ variant.option1 }}</h3>
+              </a>
+          {% elsif unique_option1 contains temp %}
+          {% else %}
+            {% assign unique_option1 = unique_option1 | append: temp %}
+              <a href="{{ product.url}}" id ="prod-{{ variant.id }}" class="feat_prod one-third columns">
+                <img src="{{variant.featured_image | img_url: '580x' }}" />
+                <h3>{{ variant.option1 }}</h3>
+              </a>
+          {% endif %}
+        {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.fps_2_featured_product  %}
+        {%- assign product2 = all_products[block.settings.fps_2_featured_product] -%}
+        <div class="section clearfix">
+          <h3 class="subtitle">{{ block.settings.fps_2_subtitle }}</h3>
+        </div>
+        <div class="prod-row">
+        {% for variant in product2.variants limit:12 %}
+          {% assign temp = " option1_" | append: variant.option1 | handleize %}
+          {% if forloop.first %}
+            {% assign unique_option1 = temp %}
+              <a href="{{ product2.url}}" id ="prod-{{ variant.id }}" class="feat_prod one-third columns">
+                <img src="{{variant.featured_image | img_url: '580x' }}" />
+                <h3>{{ variant.option1 }}</h3>
+              </a>
+          {% elsif unique_option1 contains temp %}
+          {% else %}
+            {% assign unique_option1 = unique_option1 | append: temp %}
+              <a href="{{ product2.url}}" id ="prod-{{ variant.id }}" class="feat_prod one-third columns">
+                <img src="{{variant.featured_image | img_url: '580x' }}" />
+                <h3>{{ variant.option1 }}</h3>
+              </a>
+          {% endif %}
+        {% endfor %}
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</div>

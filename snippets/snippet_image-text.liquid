@@ -1,0 +1,90 @@
+<div class="featured_collections
+            clearfix grid-layout--{{block.settings.imgCTA_grid_layout}} {% if block.settings.imgCTA_grid_layout == 'standard' %} container {% endif %}">
+
+      <section class="featured-link--section featured-link--image {% if block.settings.imgCTA_grid_layout == 'standard' %}sixteen columns{% endif %}" {{ block.shopify_attributes }}>
+        <div class="featured-link--half featured-link--image">
+          <div class="featured-link--wrap">
+            <a {% if block.settings.imgCTA_1_link != blank %}href="{{ block.settings.imgCTA_1_link }}"{% endif %} title="{{ block.settings.imgCTA_1_title | escape }}">
+              {% if block.settings.imgCTA_1_image %}
+                <img  sizes="(min-width: 36em) 33.3vw, 100vw"
+                      src="{{ block.settings.imgCTA_1_image | img_url: '1024x1024' }}"
+                    {% if block.settings.imgCTA_featured_links_per_row == 1 %}
+                      srcset=" {{ block.settings.imgCTA_1_image | img_url: '1160x' }} 1160w,
+                                {{ block.settings.imgCTA_1_image | img_url: '728x' }} 728w,
+                                {{ block.settings.imgCTA_1_image | img_url: '580x' }} 580w,
+                                {{ block.settings.imgCTA_1_image | img_url: '364x' }} 364w"
+                    {% elsif block.settings.imgCTA_featured_links_per_row == 2 %}
+                      srcset=" {{ block.settings.imgCTA_1_image | img_url: '760x' }} 760w,
+                                {{ block.settings.imgCTA_1_image | img_url: '470x' }} 470w,
+                                {{ block.settings.imgCTA_1_image | img_url: '380x' }} 380w,
+                                {{ block.settings.imgCTA_1_image | img_url: '235x' }} 235w"
+                    {% endif %}
+                    class="lazyload transition-in"
+                    alt="{{ block.settings.imgCTA_1_title | escape }}" />
+              {% else %}
+                {% capture i %}{% cycle "1", "2", "3", "4", "5", "6" %}{% endcapture %}
+                {{ 'collection-' | append: i | placeholder_svg_tag: 'placeholder-svg placeholder-svg--promotions' }}
+              {% endif %}
+            </a>
+          </div>
+        </div>
+        <div class="featured-link--half">
+          <div class="info text-align--{{ block.settings.imgCTA_frontpage_text_align }}">
+            <a {% if block.settings.imgCTA_1_link != blank %}href="{{ block.settings.imgCTA_1_link }}"{% endif %} class="collection_title">
+              {{ block.settings.imgCTA_1_title | escape }}
+            </a>
+            {% if block.settings.imgCTA_1_text != blank %}
+              <div class="description">{{ block.settings.imgCTA_1_text }}</div>
+            {% endif %}
+            {% if block.settings.imgCTA_1_button_label != blank %}
+              <a {% if block.settings.imgCTA_1_link != blank %}href="{{ block.settings.imgCTA_1_link }}"{% endif %} class="action_button">
+                {{ block.settings.imgCTA_1_button_label | escape }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </section>
+      <section class="featured-link--section featured-link--image {% if block.settings.imgCTA_grid_layout == 'standard' %}sixteen columns{% endif %}" {{ block.shopify_attributes }}>
+        <div class="featured-link--half featured-link--image">
+          <div class="featured-link--wrap">
+            <a {% if block.settings.imgCTA_2_link != blank %}href="{{ block.settings.imgCTA_2_link }}"{% endif %} title="{{ block.settings.imgCTA_2_title | escape }}">
+              {% if block.settings.imgCTA_2_image %}
+                <img  sizes="(min-width: 36em) 33.3vw, 100vw"
+                      src="{{ block.settings.imgCTA_2_image | img_url: '1024x1024' }}"
+                    {% if block.settings.imgCTA_featured_links_per_row == 1 %}
+                      srcset=" {{ block.settings.imgCTA_2_image | img_url: '1160x' }} 1160w,
+                                {{ block.settings.imgCTA_2_image | img_url: '728x' }} 728w,
+                                {{ block.settings.imgCTA_2_image | img_url: '580x' }} 580w,
+                                {{ block.settings.imgCTA_2_image | img_url: '364x' }} 364w"
+                    {% elsif block.settings.imgCTA_featured_links_per_row == 2 %}
+                      srcset=" {{ block.settings.imgCTA_2_image | img_url: '760x' }} 760w,
+                                {{ block.settings.imgCTA_2_image | img_url: '470x' }} 470w,
+                                {{ block.settings.imgCTA_2_image | img_url: '380x' }} 380w,
+                                {{ block.settings.imgCTA_2_image | img_url: '235x' }} 235w"
+                    {% endif %}
+                    class="lazyload transition-in"
+                    alt="{{ block.settings.imgCTA_2_title | escape }}" />
+              {% else %}
+                {% capture i %}{% cycle "1", "2", "3", "4", "5", "6" %}{% endcapture %}
+                {{ 'collection-' | append: i | placeholder_svg_tag: 'placeholder-svg placeholder-svg--promotions' }}
+              {% endif %}
+            </a>
+          </div>
+        </div>
+        <div class="featured-link--half">
+          <div class="info text-align--{{block.settings.imgCTA_frontpage_text_align}}">
+            <a {% if block.settings.imgCTA_2_link != blank %}href="{{ block.settings.imgCTA_2_link }}"{% endif %} class="collection_title">
+              {{ block.settings.imgCTA_2_title | escape }}
+            </a>
+            {% if block.settings.imgCTA_2_text != blank %}
+              <div class="description">{{ block.settings.imgCTA_2_text }}</div>
+            {% endif %}
+            {% if block.settings.imgCTA_2_button_label != blank %}
+              <a {% if block.settings.imgCTA_2_link != blank %}href="{{ block.settings.imgCTA_2_link }}"{% endif %} class="action_button">
+                {{ block.settings.imgCTA_1_button_label | escape }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </section>
+</div>

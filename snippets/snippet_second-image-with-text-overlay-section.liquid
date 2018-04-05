@@ -1,0 +1,51 @@
+<section {% if block.settings.sec_image_stretch == false %}class="container"{% endif %}>
+  <div class="slider flexslider homepage_slider {% if block.settings.sec_image_stretch == false %}sixteen columns{% endif %}">
+    <ul class="slides">
+      <li>
+        {% if block.settings.sec_link != blank %}
+          <a href="{{ block.settings.sec_link }}">
+        {% endif %}
+        {% if block.settings.sec_image != nil %}
+          <img  src="{{ block.settings.sec_image | img_url: '1200x' }}"
+                alt="{{ block.settings.sec_image.alt | escape }}"
+                class="lazyload transition-in"
+                sizes="100vw"
+                srcset="{{ block.settings.sec_image | img_url: '480x' }} 480w,
+                        {{ block.settings.sec_image | img_url: '768x' }} 768w,
+                        {{ block.settings.sec_image | img_url: '1200x' }} 1200w,
+                        {{ block.settings.sec_image | img_url: '2048x2048' }} 2048w"
+                 />
+        {% else %}
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg placeholder-svg--banner' }}
+        {% endif %}
+
+        {% if block.settings.sec_link != blank %}
+          </a>
+        {% endif %}
+        {% if block.settings.sec_image != blank or block.settings.sec_title != blank or block.settings.sec_subtext != blank or block.settings.sec_button_label != blank %}
+          <div class="flex-caption">
+            <div class="container">
+              <div class="columns {% if block.settings.sec_text_position == 'left' %} seven offset-by-one {% elsif block.settings.sec_text_position == 'right' %} seven offset-by-eight {% else %} eight offset-by-four {% endif %} align_{{ block.settings.sec_text_align }}">
+                {% if block.settings.sec_title != blank %}
+                  <h1 class="headline">
+                    {{ block.settings.sec_title | escape }}
+                  </h1>
+                {% endif %}
+                {% if block.settings.sec_subtext != blank %}
+                  <div class="subtitle">
+                    {{ block.settings.sec_subtext }}
+                  </div>
+                {% endif %}
+                {% if block.settings.sec_button_label != blank %}
+                  <a {% if block.settings.sec_link != blank %}href="{{ block.settings.sec_link }}"{% endif %} class="action_button">
+                    {{ block.settings.sec_button_label | escape }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </li>
+    </ul>
+  </div>
+</section>

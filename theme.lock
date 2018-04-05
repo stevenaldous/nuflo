@@ -191,6 +191,24 @@ snippets/sidebar.liquid:
   development: 2017-12-18T14:05:19-08:00   477ec64153450e3ecb1caacfef4f621c
 snippets/size-chart-popup.liquid:
   development: 2017-12-18T14:05:19-08:00   dade9d2f073664ceaac379f0ad06d785
+snippets/snippet_feat-list.liquid:
+  development: 2018-04-05T06:30:13-12:00   1591cd347e7a92a163f2ef32f132fa18
+snippets/snippet_featured-collection.liquid:
+  development: 2018-04-05T06:30:13-12:00   0a510e9870c7a2eb479828b4985545e2
+snippets/snippet_featured-products.liquid:
+  development: 2018-04-05T06:30:13-12:00   08600aa0a687e394aa7af97ea606e6d0
+snippets/snippet_featured-promotions.liquid:
+  development: 2018-04-05T06:30:14-12:00   ddbdcabacb756760a74d5fe19bee021d
+snippets/snippet_featured-text.liquid:
+  development: 2018-04-05T06:30:14-12:00   a388bbfea06a6f77737a6e18e90a8f93
+snippets/snippet_image-text.liquid:
+  development: 2018-04-05T06:30:15-12:00   0ceecea2a961bb5be2381d87d9611fde
+snippets/snippet_image-with-text-overlay-section.liquid:
+  development: 2018-04-05T06:30:15-12:00   fd90db3e440367f63d6c2c3bcce93ce4
+snippets/snippet_second-image-with-text-overlay-section.liquid:
+  development: 2018-04-05T06:30:15-12:00   e0378ff7634143cd983b349333db632a
+snippets/snippet_video.liquid:
+  development: 2018-04-05T06:30:16-12:00   c05a08fe332e7ef4727a0455be9eaeab
 snippets/social-buttons.liquid:
   development: 2017-12-18T14:05:19-08:00   5b015171e69f408cdd941a8e791bd667
 snippets/social-icons.liquid:
@@ -241,6 +259,8 @@ templates/page.custom-1.liquid:
   development: 2018-02-01T16:16:07-08:00   3190be0be15524424399d12cd3586db1
 templates/page.custom-2.liquid:
   development: 2018-02-01T16:13:42-08:00   5058f2cf3c9af1a2ffebdcf941865aa2
+templates/page.custom-3.liquid:
+  development: 2018-04-05T06:34:40-12:00   01c5b228dbc26821977107fea64f198c
 templates/page.custom-4.liquid:
   development: 2018-02-01T16:14:09-08:00   2a27b89e501f6018c48de0977b0eaa89
 templates/page.details.liquid:

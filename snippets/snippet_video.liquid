@@ -1,0 +1,61 @@
+<section  class="homepage-video darken-video-{{ block.settings.vid_video_dark_overlay }}"
+      data-video-id="video-{{block.id}}"
+   vid_   data-autoplay="{{ block.settings.vid_autoplay }}"
+      data-autoloop="{{ block.settings.vid_autoloop }}"
+      data-video-text="{{ block.settings.vid_display_text_over_video }}"
+      >
+  <div class="homepage-video--media"
+    data-video-src="{{ block.settings.vid_video.id }}"
+    data-aspect-ratio="{{ block.settings.vid_aspect_ratio }}"
+    data-provider="{{ block.settings.vid_source }}"
+    data-video-mp4="{{ block.settings.vid_mp4 }}"
+    data-video-ogv="{{ block.settings.vid_ogv }}" >
+    {% if block.settings.vid_image %}
+      <img  data-play-video
+            src="{{ block.settings.vid_image | img_url: '1200x' }}"
+            alt="{{ block.settings.vid_title | escape }}"
+            class="lazyload transition-in homepage-video__image"
+            sizes="100vw"
+            srcset="{{ block.settings.vid_image | img_url: '480x' }} 480w,
+                    {{ block.settings.vid_image | img_url: '768x' }} 768w,
+                    {{ block.settings.vid_image | img_url: '1200x' }} 1200w,
+                    {{ block.settings.vid_image | img_url: '2048x2048' }} 2048w"
+             />
+    {% else %}
+      <div class="homepage-video__placeholder" data-play-video>
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg placeholder-svg--video' }}
+      </div>
+    {% endif %}
+
+    <div class="flex-caption flexslider caption js-caption">
+      <div class="container">
+        <div class="columns {% if block.settings.vid_text_position == 'left' %} seven offset-by-one {% elsif block.settings.vid_text_position == 'right' %} seven offset-by-eight  {% else %} eight offset-by-four {% endif %} align_{{ block.settings.vid_text_align }} caption-content">
+          {% if block.settings.vid_title != blank %}
+            <h1 class="headline">
+              {{ block.settings.vid_title | escape }}
+            </h1>
+          {% endif %}
+          {% if block.settings.vid_subtext != blank %}
+            <div class="subtitle">
+              {{ block.settings.vid_subtext }}
+            </div>
+          {% endif %}
+          {% if block.settings.vid_button_label != blank %}
+            <a {% if block.settings.vid_link != blank %}href="{{ block.settings.vid_link }}"{% endif %} class="action_button" data-play-video>
+              {{ block.settings.vid_button_label | escape }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  {% if block.settings.vid_autoplay %}
+    .homepage-video__placeholder {
+      visibility: hidden;
+    }
+  {% endif %}
+</style>
+

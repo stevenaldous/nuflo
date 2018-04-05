@@ -1,0 +1,29 @@
+<div class="homepage_content {% if block.settings.frt_reverse == true %}reverse{% endif %} clearfix">
+  <div class="container">
+    <div class="sixteen columns">
+      <div class="section {{ block.settings.frt_text_alignment }} clearfix">
+        {% if block.settings.frt_image %}
+          {{ block.settings.frt_image | img_url: '1180x', scale: 2 | img_tag: block.settings.frt_image.alt, 'lazyload transition-in' }}
+        {% endif %}
+
+        {% if block.settings.frt_title != blank %}
+          <h2 class="title">
+            {{ block.settings.frt_title | escape }}
+          </h2>
+        {% endif %}
+
+        <div class="{{ block.settings.frt_text_size }}">
+          {% if block.settings.frt_content != blank %}
+            {{ block.settings.frt_content }}
+          {% endif %}
+
+          {% if block.settings.frt_button_label != blank and block.settings.frt_button_link != blank %}
+            <a href="{{ block.settings.frt_button_link }}">
+              {{ block.settings.frt_button_label | escape }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
